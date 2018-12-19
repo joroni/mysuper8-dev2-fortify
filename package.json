@@ -1,0 +1,19 @@
+{
+  "name": "com.phonegap.helloworld",
+  "version": "1.0.0",
+  "displayName": "TrialFromMonaca",
+  "cordova": {
+    "platforms": [
+      "browser"
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    }
+  },
+  "dependencies": {
+    "cordova-browser": "^5.0.4",
+    "cordova-plugin-camera": "^4.0.3",
+    "cordova-plugin-whitelist": "^1.3.3",
+    "f7-welcomescreen": "^2.1.4"
+  }
+}

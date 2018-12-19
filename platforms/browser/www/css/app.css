@@ -1,0 +1,96 @@
+/* Your app styles here */
+.bg-green {
+    background: green;
+}
+
+.bg-blue {
+    background: blue;
+}
+
+.bg-yellow{
+    background:yellow;
+
+}
+
+body.color-theme-s8,
+.md  body.color-theme-s8 .statusbar,
+.md body.color-theme-s8 .navbar,
+.md body.color-theme-s8 .toolbar, a.tab-link {
+  background:#154A89 !important;
+       background-color:#154A89 !important;
+}
+
+
+.grad-blue-white {
+    background-image: linear-gradient(#FFF 60%, #7FBEFC);
+}
+
+.md body.color-theme-s8, .fab-buttons a, .md body.color-theme-s8 .fab>a {
+    background:#154A89 ;
+}
+
+.md body.color-theme-s8 .stepper-input-wrap, .md body.color-theme-s8 .stepper-value {
+    border-top: 2px solid #154A89;
+    border-bottom: 2px solid #154A89;
+}
+
+.md body.color-theme-s8 .stepper-button, .md body.color-theme-s8 .stepper-button-minus, .md body.color-theme-s8.stepper-button-plus {
+    border: 2px solid #154A89;
+    color: #154A89;
+    line-height: 34px;
+}
+
+.md body.color-theme-s8 .stepper-button, .md body.color-theme-s8 .stepper-button-minus, .md body.color-theme-s8 .stepper-button-plus{
+    border: 2px solid #154A89;
+    color: #154A89;
+}
+
+
+.md body.color-theme-s8 .stepper-button-minus:after, .md  body.color-theme-s8 .stepper-button-minus:before, .md body.color-theme-s8 .stepper-button-plus:after, .md body.color-theme-s8 .stepper-button-plus:before {
+    background: #154A89;
+}
+
+
+.md body.color-theme-s8 .stepper .stepper-input-wrap input, .md body.color-theme-s8 .stepper .stepper-value {
+    color: #154A89;
+  
+}
+.md body.color-theme-s8  .color-theme-s8{
+    background:#154A89;
+}
+
+.md body.color-theme-s8  .home .navbar {
+    background: #fff !important;
+}
+.parent {
+    z-index: 200000;
+}
+
+.md body.color-theme-s8 .button.button-active, .md body.color-theme-s8  .button.button-fill, .md body.color-theme-s8  .button.button-fill-md, .md body.color-theme-s8 .button.tab-link-active {
+    background-color: #154A89;
+    color: #fff;
+}
+
+.md body.color-theme-s8 .navbar .title, .md body.color-theme-s8 .navbar a.link  {
+    color: #fff !important;
+  
+}
+
+.md body.color-theme-s8  .button.button-outline {
+    border: 2px solid #154A89;
+    line-height: 32px;
+    color:#154A89;
+}
+.md body.color-theme-s8 #cartInfo .title, .md body.color-theme-s8 .cart .title {
+    color: #154A89;
+  
+}
+div#thisList{
+    margin-top: 0 ;
+}
+
+
+
+h3.title {
+    font-size: 1.1em;
+}

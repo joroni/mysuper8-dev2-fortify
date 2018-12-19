@@ -1,0 +1,50 @@
+<template>
+  <div class="page" data-name="productb">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+        </div>
+      <!--  <div id="ccompleteName" class="title"></div>-->
+        <div class="title">{{productb.title}} {{productb.fname}}</div>
+      </div>
+    </div>
+
+    <div class="page-content">
+      <div class="block-title">{{productb.phone}}</div>
+      <div class="block block-strong">
+         <p>{{productb.description}}</p>
+         <p>{{productb.add_street}}</p>
+         <p>{{productb.add_unit}}, {{productb.add_area}}</p>
+         <p>{{productb.add_city}},  {{productb.add_zip}}</p>
+      </div>
+      <div class="block">
+        <button class="col button button-big button-fill button-active">CREATE ORDER</button>
+      </div>
+    
+       
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  
+  return {
+    data: function () {
+      var productbId = this.$route.params.id;
+      var currentProductb;
+      this.$root.productbs.forEach(function (productb) {
+        if (productb.id === productbId) {
+          currentProductb = productb;
+        }
+      });
+      return {
+        productb: currentProductb,
+      };
+      alert(productbId+''+productb.id);
+    }
+  };
+</script>

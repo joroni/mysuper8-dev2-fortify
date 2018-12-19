@@ -1,0 +1,114 @@
+<template>
+    <div class="page" id="product" data-name="product">
+      <div class="navbar">
+        <div class="navbar-inner sliding">
+          <div class="left">
+            <a href="#" class="link back">
+              <i class="icon icon-back"></i>
+              <span class="ios-only">Back</span>
+            </a>
+          </div>
+          <div class="title">{{product.cat}} > {{product.name}}</div>
+        </div>
+      </div>
+      <div class="page-content">
+  
+        <main class="mt-3 pt-4">
+          <div class="container dark-grey-text mt-2">
+  
+            <!--Grid row-->
+            <div class="row wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+            
+              <!--Grid column-->
+              <div class="col-md-6 mb-4 centered" id="prodImg"><img src="{{product.img}}" class="img-fluid prod-page-image"
+                  alt="{{product.name}}"></div>
+  
+              <!--Grid column-->
+              <div class="col-md-6 mb-4">
+                <div class="p-1">
+  
+                  <h2 class="centered" id="thisName">{{product.name}}</h2>
+                  <p class="lead small centered" id="thisStock">In Stock: {{product.stock}}</p>
+                  
+                </div>
+                <!--Content-->
+                <div class="p-1">
+  
+                  <div class="mb-3 centered" id="thisBadges"><a href=""><span class="mybadge badge {{product.statecolor}} mr-1">{{product.state}}</span></a></div>
+  
+                  <p class="lead centered" id="thisLead"><span class="mr-1"> <del>{{product.oldprice}}</del></span><span>
+                      {{product.price}}</span></p>
+  
+                  <p class="lead font-weight-bold">Description</p>
+  
+                  <p id="thisDesc"> {{product.descr}}</p>
+                  <hr>
+                  <form class="d-flex justify-content-left" id="thisAddCart">
+                    <!-- Default input -->
+                   </form>
+                   <div data-id="{{product.id}}" class="mystepper{{product.id}}">
+                   </div>
+                 
+                   <div id="stepper_center_prod_{{product.id}}" data-id="{{product.id}}" class="centered">
+                      <div class="stepper stepper-small stepper-init">
+                          <div class="stepper-button-minus prod_{{product.id}}" onclick="app.updateItem({{product.id}} ,{{product.stock}})"  ></div>
+                          <div class="stepper-input-wrap">
+                            <input type="number" id="prod_{{product.id}}" readonly name="quant[{{product.id}}]" class="form-control input-number quantity manage-qtty" value="0" min="0" max="100">
+                          </div>
+                         <!-- <div class="stepper-button-plus prod_{{id}}" onclick="app.addToCart('{{id}}')"></div>-->
+                         <div class="stepper-button-plus prod_{{product.id}}" data-id="plus_{{product.id}}" onclick="app.addToMyCart({{product.id}})"></div>
+                        </div>
+                      </div>
+                </div>
+                <!--Content-->
+  
+              </div>
+              <!--Grid column-->
+  
+            </div>
+            <!--Grid row-->
+  
+            <hr>
+  
+  
+  
+          </div>
+        </main>
+  
+  
+      </div>
+    </div>
+    <footer>
+      <div class="container-fluid pt-2 pb-2 white">
+        <a class="btn btn-success btn-block" href="#" role="button" data-toggle="modal" data-target="#modalCart">View
+          Cart
+          <a class="cart-icon">
+            <span id="totalItems">0</span>
+  
+          </a>
+          <!---<i class="fa fa-shopping-cart ml-2"></i>
+               <span class="badge red super8 z-depth-1 mr-1"> 1 </span>-->
+        </a>
+      </div>
+    </footer>
+  
+  </template>
+  <script>
+     productlist = JSON.parse(localStorage.getItem("jsonproducts"));
+    return {
+      data: function () {
+        var productId = this.$route.params.id;
+        var currentProduct;
+      //  this.$root.products.forEach(function (product) {
+        productlist.forEach(function (product) {
+          if (product.id === productId) {
+            currentProduct = product;
+          }
+        });
+        return {
+          product: currentProduct,
+        };
+      }
+    };
+  </script>
+  
