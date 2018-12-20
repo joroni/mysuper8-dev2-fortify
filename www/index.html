@@ -20,6 +20,20 @@
   
   <link rel="stylesheet" href="components/loader.css">
   <link rel="stylesheet" href="css/style.css">
+  <script>
+  (function() {
+    var xhr = {};
+    xhr.open = XMLHttpRequest.prototype.open;
+
+    XMLHttpRequest.prototype.open = function(method, url) {
+        console.log(url);
+        if(url.indexOf('/proxy/') == 0){
+            url = window.decodeURIComponent(url.substr(7));
+        }
+        xhr.open.apply(this, arguments);
+    };
+})(window);
+</script>
 </head>
 
 <body class="color-theme-s8">
