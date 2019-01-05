@@ -1,0 +1,49 @@
+<template>
+  <div class="page" data-name="category" id='cats'>
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+            <a href="#" class="link back">
+                <i class="material-icons">
+                    arrow_back_ios
+                    </i>
+              <span class="ios-only">Back</span>
+            </a>
+        </div>
+        <div class="title">Category</div>
+      </div>
+    </div>
+   <div class="page-content ptr-content" data-ptr-distance="55">
+    <!-- Default pull to refresh preloader-->
+    <div class="ptr-preloader">
+      <div class="preloader"></div>
+      <div class="ptr-arrow"></div>
+    </div>
+
+      <div class="list links-list">
+          <ul id="categories">
+            {{#each products}}
+            
+                <li><a class="category link" alt="{{cat}}" href="#">{{cat}}</a></li>
+              <!--  <li><a class="category link" alt="{{cat}}" href="/page-loader-template7/{{cat}}/">{{cat}}</a></li>-->
+
+            {{/each}}
+          </ul>
+        </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  
+productlist = JSON.parse(localStorage.getItem("products"));
+  return {
+    data: function () {
+      return {
+      //  products: _.uniq( this.$root.products, 'cat'),
+        products: _.uniq( productlist, 'cat'),
+        
+      };
+    }
+  };
+</script>

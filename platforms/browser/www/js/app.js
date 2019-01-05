@@ -2,7 +2,7 @@ var $$ = Dom7;
 
 var orderItems = localStorage.getItem("txtClients");
 var customers = localStorage.getItem("customers");
-window.base_url = "http://128.199.165.197/joroni/super8webapp";
+window.base_url = "http://178.128.63.151/slimapp";
 //var base_url = "http://localhost/slim";
 var currency_icon = '₱';
 $$(".button").addClass("button-big");

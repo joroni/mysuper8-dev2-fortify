@@ -1,0 +1,4 @@
+#Thu Dec 20 14:26:45 SGT 2018
+base.0=C\:\\Users\\John Raymund Niconi\\GIthub-bneXt2\\_new3\\mysuper8-dev2-fortify\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

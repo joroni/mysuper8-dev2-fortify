@@ -1,0 +1,51 @@
+<template>
+    <div class="page" id="orders" data-name="orders">
+        <div class="navbar">
+            <div class="navbar-inner sliding">
+                <div class="left hidden">
+                    <a href="#" class="link back">
+                        <i class="icon icon-back"></i>
+                        <span class="ios-only">Back</span>
+                    </a>
+                </div>
+                <div class="title">Orders</div>
+            </div>
+        </div>
+        <div class="fab fab-right-bottom">
+            <a href="#" class="fill popup-open" data-popup="#my-popup">
+                <i class="icon f7-icons">add</i>
+            </a>
+        </div>
+        <div class="page-content">
+            <div class="list links-list">
+               <ul id="orderList">
+
+                    <div class="no-items centered">
+                        No items.
+                    </div>
+                </ul>
+              <!--  <ul id="li-integrantes">
+                    {{#each productbs}}
+					<li>
+						<a href="/productb/{{id}}/">{{title}} {{fname}}</a>
+					</li>
+					{{/each}}
+                </ul>-->
+            </div>
+
+        </div>
+
+    </div>
+</template>
+
+<script>
+
+    
+    return {
+        data: function () {
+            return {
+                productbs: this.$root.productbs,
+            };
+        }
+    };
+</script>
